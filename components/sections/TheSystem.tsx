@@ -35,24 +35,24 @@ const CHECKLIST = [
 function DashboardMockup() {
   return (
     <div className="relative">
-      <div className="bg-dark-charcoal border border-warrior-border rounded-sm overflow-hidden shadow-2xl shadow-black/60">
+      <div className="bg-[#222422] border border-[#333] rounded-sm overflow-hidden shadow-2xl shadow-black/60">
         {/* Mockup header */}
-        <div className="bg-warrior-black px-4 py-3 border-b border-warrior-border flex items-center gap-2">
+        <div className="bg-[#181A18] px-4 py-3 border-b border-[#333] flex items-center gap-2">
           <div className="flex gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
             <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
             <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
           </div>
-          <p className="text-warrior-text text-xs font-inter ml-2">mdcatemy.com / my-camp</p>
+          <p className="text-gray-500 text-xs font-inter ml-2">mdcatemy.com / my-camp</p>
         </div>
 
         <div className="p-5 space-y-4">
           {/* Score predictor */}
-          <div className="bg-warrior-black rounded-sm p-4 border border-warrior-border">
-            <p className="text-warrior-text text-xs font-inter mb-3 uppercase tracking-wider">Score Predictor</p>
+          <div className="bg-[#181A18] rounded-sm p-4 border border-[#333]">
+            <p className="text-gray-500 text-xs font-inter mb-3 uppercase tracking-wider">Score Predictor</p>
             <div className="flex items-end gap-4">
               <div className="flex-1">
-                <div className="relative h-3 bg-warrior-border rounded-full overflow-hidden">
+                <div className="relative h-3 bg-[#333] rounded-full overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: "78%" }}
@@ -62,13 +62,13 @@ function DashboardMockup() {
                   />
                 </div>
                 <div className="flex justify-between mt-1">
-                  <span className="text-warrior-text text-xs">0</span>
-                  <span className="text-warrior-text text-xs">200</span>
+                  <span className="text-gray-500 text-xs">0</span>
+                  <span className="text-gray-500 text-xs">200</span>
                 </div>
               </div>
               <div className="text-right">
                 <span className="text-mdcat-yellow font-poppins font-black text-2xl">156</span>
-                <span className="text-warrior-text text-xs font-inter block">/200</span>
+                <span className="text-gray-500 text-xs font-inter block">/200</span>
               </div>
             </div>
           </div>
@@ -81,12 +81,12 @@ function DashboardMockup() {
               { sub: "Physics", pct: 45, color: "bg-orange-500" },
               { sub: "English", pct: 88, color: "bg-green-400" },
             ].map((item) => (
-              <div key={item.sub} className="bg-warrior-black rounded-sm p-3 border border-warrior-border">
+              <div key={item.sub} className="bg-[#181A18] rounded-sm p-3 border border-[#333]">
                 <div className="flex justify-between mb-2">
                   <span className="text-white text-xs font-inter font-medium">{item.sub}</span>
-                  <span className="text-warrior-text text-xs">{item.pct}%</span>
+                  <span className="text-gray-500 text-xs">{item.pct}%</span>
                 </div>
-                <div className="h-1.5 bg-warrior-border rounded-full overflow-hidden">
+                <div className="h-1.5 bg-[#333] rounded-full overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${item.pct}%` }}
@@ -100,8 +100,8 @@ function DashboardMockup() {
           </div>
 
           {/* Daily tasks */}
-          <div className="bg-warrior-black rounded-sm p-4 border border-warrior-border">
-            <p className="text-warrior-text text-xs font-inter mb-3 uppercase tracking-wider">Today&apos;s Battle Plan</p>
+          <div className="bg-[#181A18] rounded-sm p-4 border border-[#333]">
+            <p className="text-gray-500 text-xs font-inter mb-3 uppercase tracking-wider">Today&apos;s Battle Plan</p>
             <div className="space-y-2">
               {[
                 { task: "Biology — Cell Division (Lecture 12)", done: true },
@@ -111,11 +111,11 @@ function DashboardMockup() {
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className={`w-4 h-4 rounded-sm border flex items-center justify-center flex-shrink-0 ${
-                    item.done ? "bg-mdcat-yellow border-mdcat-yellow" : "border-warrior-border"
+                    item.done ? "bg-mdcat-yellow border-mdcat-yellow" : "border-[#444]"
                   }`}>
-                    {item.done && <CheckCircle size={10} className="text-warrior-black" />}
+                    {item.done && <CheckCircle size={10} className="text-[#181A18]" />}
                   </div>
-                  <span className={`text-xs font-inter ${item.done ? "text-warrior-text line-through" : "text-white"}`}>
+                  <span className={`text-xs font-inter ${item.done ? "text-gray-500 line-through" : "text-white"}`}>
                     {item.task}
                   </span>
                 </div>
@@ -124,17 +124,17 @@ function DashboardMockup() {
           </div>
 
           {/* Family status */}
-          <div className="bg-warrior-black rounded-sm p-4 border border-warrior-border">
-            <p className="text-warrior-text text-xs font-inter mb-3 uppercase tracking-wider">Your Family</p>
+          <div className="bg-[#181A18] rounded-sm p-4 border border-[#333]">
+            <p className="text-gray-500 text-xs font-inter mb-3 uppercase tracking-wider">Your Family</p>
             <div className="flex items-center gap-3">
               {["A", "Z", "H", "F", "U"].map((initial, i) => (
                 <div key={i} className="flex flex-col items-center gap-1">
                   <div className="relative">
-                    <div className="w-8 h-8 rounded-full bg-warrior-border flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-[#333] flex items-center justify-center">
                       <span className="text-white text-xs font-poppins font-bold">{initial}</span>
                     </div>
-                    <div className={`absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border border-dark-charcoal ${
-                      i < 3 ? "bg-green-400" : "bg-warrior-border"
+                    <div className={`absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border border-[#222422] ${
+                      i < 3 ? "bg-green-400" : "bg-[#444]"
                     }`} />
                   </div>
                 </div>
@@ -155,7 +155,7 @@ function DashboardMockup() {
 
 export default function TheSystem() {
   return (
-    <section className="py-24 bg-dark-charcoal relative">
+    <section className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text */}
@@ -177,7 +177,7 @@ export default function TheSystem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-poppins font-black text-white mb-4"
+              className="font-poppins font-black text-gray-900 mb-4"
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", lineHeight: "1.1" }}
             >
               Ace MDCAT
@@ -190,7 +190,7 @@ export default function TheSystem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: 0.15 }}
-              className="text-warrior-text font-inter text-lg leading-relaxed mb-10"
+              className="text-gray-600 font-inter text-lg leading-relaxed mb-10"
             >
               Every Study Tribe warrior gets full access to our flagship mindset course. Before you open a single lecture, you build the frame that holds everything together under pressure.
             </motion.p>
@@ -210,8 +210,8 @@ export default function TheSystem() {
                     <item.icon size={18} className="text-mdcat-yellow" />
                   </div>
                   <div>
-                    <p className="text-white font-poppins font-semibold text-sm mb-0.5">{item.title}</p>
-                    <p className="text-warrior-text text-sm font-inter leading-relaxed">{item.desc}</p>
+                    <p className="text-gray-900 font-poppins font-semibold text-sm mb-0.5">{item.title}</p>
+                    <p className="text-gray-600 text-sm font-inter leading-relaxed">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function PainPoint() {
   return (
-    <section className="py-24 bg-warrior-black tribal-overlay relative">
+    <section className="py-24 bg-white tribal-overlay relative">
       <div className="relative z-10 max-w-[680px] mx-auto px-6 lg:px-8">
 
         {/* Label */}
@@ -24,7 +24,7 @@ export default function PainPoint() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-poppins font-black text-white mb-10"
+          className="font-poppins font-black text-gray-900 mb-10"
           style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", lineHeight: "1.1" }}
         >
           Why Most MDCAT Students Fail.
@@ -33,7 +33,7 @@ export default function PainPoint() {
         </motion.h2>
 
         {/* Article body */}
-        <div className="space-y-6 font-inter text-warrior-text text-[17px] leading-[1.8]">
+        <div className="space-y-6 font-inter text-gray-600 text-[17px] leading-[1.8]">
           {[
             {
               text: "Every year, hundreds of thousands of students sit for MDCAT. Most of them studied. Most of them watched lectures. Most of them bought notes. And most of them did not get in. Not because they were not smart enough. Not because they did not work hard. But because no one built a system around them.",
@@ -69,10 +69,10 @@ export default function PainPoint() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.55, delay: 0.2 }}
-          className="my-14 py-10 border-t border-b border-warrior-border"
+          className="my-14 py-10 border-t border-b border-gray-200"
         >
           <p
-            className="font-poppins font-black text-mdcat-yellow text-center leading-tight"
+            className="font-poppins font-black text-gray-900 text-center leading-tight"
             style={{ fontSize: "clamp(1.4rem, 3.5vw, 2.2rem)" }}
           >
             You do not need more resources.
@@ -89,7 +89,7 @@ export default function PainPoint() {
           transition={{ duration: 0.45 }}
           className="flex flex-col items-center gap-6 text-center"
         >
-          <p className="text-white/70 text-base font-inter">
+          <p className="text-gray-500 text-base font-inter">
             We built something that solves this.
           </p>
           <a

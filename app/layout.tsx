@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   description:
     "Join the Study Tribe — Pakistan's most intensive MDCAT preparation system. Veteran coaching, personalized plans, and the accountability system built to get you into a medical college.",
   keywords: ["MDCAT", "MDCAT preparation", "Study Tribe", "MDCATEMY", "medical college Pakistan"],
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "MDCATEMY | MDCAT is a War. Prepare Like a Warrior.",
     description:
@@ -20,10 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="bg-warrior-black text-white font-inter antialiased overflow-x-hidden">
+      <body className="bg-white text-gray-900 font-inter antialiased overflow-x-hidden">
         {children}
       </body>
     </html>

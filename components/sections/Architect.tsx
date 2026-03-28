@@ -13,7 +13,7 @@ const TIMELINE = [
 
 export default function Architect() {
   return (
-    <section id="architect" className="py-24 bg-warrior-black relative overflow-hidden">
+    <section id="architect" className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Faint background grid */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@ export default function Architect() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-sm overflow-hidden border border-warrior-border">
+            <div className="relative rounded-sm overflow-hidden border border-gray-200">
               <Image
                 src="/images/hayan.jpg"
                 alt="Hayan Khan — Founder of MDCATEMY"
@@ -59,7 +59,7 @@ export default function Architect() {
               />
               {/* Yellow overlay gradient at bottom */}
               <div className="absolute bottom-0 left-0 right-0 h-32"
-                style={{ background: "linear-gradient(to top, #181A18, transparent)" }}
+                style={{ background: "linear-gradient(to top, #f9fafb, transparent)" }}
               />
             </div>
 
@@ -78,7 +78,7 @@ export default function Architect() {
             transition={{ duration: 0.6, delay: 0.15 }}
           >
             <h2
-              className="font-poppins font-black text-white mb-2"
+              className="font-poppins font-black text-gray-900 mb-2"
               style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
             >
               Hayan Khan
@@ -87,13 +87,13 @@ export default function Architect() {
               Founder, MDCATEMY
             </p>
 
-            <p className="text-warrior-text font-inter text-lg leading-relaxed mb-10">
+            <p className="text-gray-600 font-inter text-lg leading-relaxed mb-10">
               I scored 184 in MDCAT. Not because I was the smartest student in the room. But because I built the right system around myself — one that survived the anxiety, the bad days, and the months of uncertainty. After I got in, I kept asking myself: why do so many students who work just as hard not make it? The answer was always the same. No system. No accountability. No one checking on them. So I built what I wish I had.
             </p>
 
             {/* Timeline */}
             <div className="space-y-6">
-              <h3 className="font-poppins font-bold text-white text-base uppercase tracking-wider mb-4">
+              <h3 className="font-poppins font-bold text-gray-900 text-base uppercase tracking-wider mb-4">
                 The Timeline
               </h3>
               {TIMELINE.map((item, i) => (
@@ -110,11 +110,11 @@ export default function Architect() {
                       <span className="text-mdcat-yellow font-poppins font-black text-xs">{item.year}</span>
                     </div>
                     {i < TIMELINE.length - 1 && (
-                      <div className="w-px flex-1 bg-warrior-border mt-2" />
+                      <div className="w-px flex-1 bg-gray-200 mt-2" />
                     )}
                   </div>
                   <div className="pb-6">
-                    <p className="text-white/85 font-inter text-sm leading-relaxed">{item.event}</p>
+                    <p className="text-gray-700 font-inter text-sm leading-relaxed">{item.event}</p>
                   </div>
                 </motion.div>
               ))}

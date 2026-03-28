@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -21,8 +21,8 @@ html {
 }
 
 body {
-  background-color: #181A18;
-  color: #ffffff;
+  background-color: #F0F0F0;
+  color: #111111;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,7 +34,7 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #181A18;
+  background: rgba(255, 255, 255, 0.04);
 }
 ::-webkit-scrollbar-thumb {
   background: #FFC600;
@@ -43,8 +43,8 @@ body {
 
 /* Selection */
 ::selection {
-  background: rgba(255, 198, 0, 0.3);
-  color: #ffffff;
+  background: rgba(255, 198, 0, 0.25);
+  color: #111111;
 }
 
 /* Marquee pause on hover */
@@ -64,12 +64,12 @@ body {
   left: -120%;
   width: 60%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
   transform: skewX(-25deg);
 }
 .btn-primary:hover {
   @apply scale-105;
-  box-shadow: 0 0 32px 8px rgba(255, 198, 0, 0.4);
+  box-shadow: 0 4px 24px rgba(255, 198, 0, 0.45), 0 0 0 0 transparent;
 }
 .btn-primary:hover::after {
   animation: btn-shimmer 0.55s ease forwards;
@@ -84,7 +84,7 @@ body {
 }
 
 .btn-ghost {
-  @apply border border-white/30 text-white font-inter font-bold px-8 py-4 rounded-xl text-base uppercase tracking-wider transition-all duration-200 bg-transparent;
+  @apply border border-gray-300 text-gray-700 font-inter font-bold px-8 py-4 rounded-xl text-base uppercase tracking-wider transition-all duration-200 bg-transparent;
 }
 .btn-ghost:hover {
   @apply border-mdcat-yellow text-mdcat-yellow;
@@ -111,7 +111,7 @@ body {
   inset: 0;
   background-image: url('/images/tribal-bg.svg');
   background-size: 300px 300px;
-  opacity: 0.07;
+  opacity: 0.03;
   pointer-events: none;
   z-index: 0;
 }
@@ -122,6 +122,14 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Shared section badge patterns */
+.section-badge {
+  @apply inline-flex items-center gap-2 bg-mdcat-yellow/10 border border-mdcat-yellow/30 rounded-full px-5 py-2;
+}
+.section-badge-dark {
+  @apply inline-flex items-center gap-2 bg-black/10 border border-black/20 rounded-full px-5 py-2;
 }
 
 /* Yellow left border callout */
@@ -136,7 +144,7 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 198, 0, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 0 20px rgba(255, 198, 0, 0.1);
 }
 
 /* Accordion transition */
@@ -145,13 +153,14 @@ body {
   transition: max-height 0.35s ease, opacity 0.3s ease;
 }
 
+
 /* Noise texture overlay for depth */
 .noise-overlay::after {
   content: '';
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  opacity: 0.4;
+  opacity: 0.2;
   pointer-events: none;
   z-index: 1;
 }

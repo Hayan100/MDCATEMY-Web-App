@@ -9,13 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Dark elements (buttons, dashboard mockup, footer accents)
         "warrior-black": "#181A18",
         "dark-charcoal": "#222422",
+        // Accent
         "mdcat-yellow": "#FFC600",
         "mdcat-yellow-dark": "#E6B200",
-        "warrior-gray": "#2A2C2A",
-        "warrior-text": "#A8ACA8",
-        "warrior-border": "#2E302E",
+        // Light theme surface & text tokens
+        "warrior-gray": "#F3F4F6",
+        "warrior-text": "#6B7280",
+        "warrior-border": "#E5E7EB",
+        // Page background warm palette
+        "page-warm": "#F0F0F0",
+        "page-warm-alt": "#E8E8E8",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -42,7 +48,7 @@ const config: Config = {
         },
         "pulse-glow": {
           "0%, 100%": { boxShadow: "0 0 0 0 rgba(255, 198, 0, 0)" },
-          "50%": { boxShadow: "0 0 24px 8px rgba(255, 198, 0, 0.25)" },
+          "50%": { boxShadow: "0 0 24px 8px rgba(255, 198, 0, 0.3)" },
         },
         "fade-up": {
           "0%": { opacity: "0", transform: "translateY(24px)" },
@@ -51,7 +57,7 @@ const config: Config = {
       },
       backgroundImage: {
         "tribal-pattern": "url('/images/tribal-bg.svg')",
-        "gradient-warrior": "linear-gradient(180deg, #181A18 0%, #222422 100%)",
+        "gradient-warrior": "linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%)",
       },
     },
   },

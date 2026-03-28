@@ -48,20 +48,27 @@ function FAQItem({ faq, index }: { faq: typeof FAQS[0]; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.35, delay: index * 0.06 }}
-      className="border border-warrior-border rounded-sm overflow-hidden"
+      className="rounded-2xl overflow-hidden"
+      style={{
+        backgroundColor: "#222422",
+        border: open ? "1px solid rgba(255,198,0,0.3)" : "1px solid rgba(255,255,255,0.07)",
+        boxShadow: open ? "inset 3px 0 0 #FFC600" : "none",
+        transition: "border-color 0.25s ease, box-shadow 0.25s ease",
+      }}
     >
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between p-6 text-left bg-dark-charcoal hover:bg-warrior-gray transition-colors duration-200 group"
+        className="w-full flex items-center justify-between p-6 text-left transition-colors duration-200"
+        style={{ backgroundColor: open ? "rgba(255,198,0,0.04)" : "transparent" }}
       >
-        <span className="font-inter font-semibold text-white text-base pr-4 group-hover:text-mdcat-yellow transition-colors duration-200">
+        <span className={`font-inter font-semibold text-base pr-4 transition-colors duration-200 ${open ? "text-mdcat-yellow" : "text-white/70"}`}>
           {faq.q}
         </span>
-        <div className="flex-shrink-0 w-8 h-8 rounded-sm bg-warrior-black border border-warrior-border flex items-center justify-center">
+        <div className="flex-shrink-0 w-8 h-8 rounded-xl flex items-center justify-center" style={{ backgroundColor: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)" }}>
           {open ? (
             <Minus size={14} className="text-mdcat-yellow" />
           ) : (
-            <Plus size={14} className="text-warrior-text" />
+            <Plus size={14} style={{ color: "rgba(255,255,255,0.4)" }} />
           )}
         </div>
       </button>
@@ -76,8 +83,8 @@ function FAQItem({ faq, index }: { faq: typeof FAQS[0]; index: number }) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-6 bg-dark-charcoal border-t border-warrior-border">
-              <p className="text-warrior-text font-inter text-base leading-relaxed pt-5">
+            <div className="px-6 pb-6" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
+              <p className="font-inter text-base leading-relaxed pt-5" style={{ color: "rgba(255,255,255,0.7)" }}>
                 {faq.a}
               </p>
             </div>
@@ -90,7 +97,8 @@ function FAQItem({ faq, index }: { faq: typeof FAQS[0]; index: number }) {
 
 export default function FAQ() {
   return (
-    <section className="py-24 bg-warrior-black relative">
+    <section className="py-24 relative" style={{ backgroundColor: "#181A18" }}>
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-mdcat-yellow/30 to-transparent" />
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
           <motion.p

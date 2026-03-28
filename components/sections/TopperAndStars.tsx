@@ -202,7 +202,7 @@ function StarCard({ s, index }: { s: typeof STARS[0]; index: number }) {
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
       whileHover={{ y: -6, transition: { duration: 0.2 } }}
-      className="flex flex-col items-center bg-warrior-black border border-warrior-border rounded-xl p-5 hover:border-mdcat-yellow/50 transition-colors duration-300 cursor-default"
+      className="flex flex-col items-center bg-white border border-gray-200 rounded-xl p-5 hover:border-mdcat-yellow/50 transition-colors duration-300 cursor-default"
     >
       <div className="relative mb-3">
         <div
@@ -217,7 +217,7 @@ function StarCard({ s, index }: { s: typeof STARS[0]; index: number }) {
         )}
       </div>
 
-      <p className="font-inter font-black text-white text-sm text-center leading-tight mb-1">
+      <p className="font-inter font-black text-gray-900 text-sm text-center leading-tight mb-1">
         {s.name}
       </p>
 
@@ -237,7 +237,7 @@ function StarCard({ s, index }: { s: typeof STARS[0]; index: number }) {
 ───────────────────────────────────────────── */
 export default function TopperAndStars() {
   return (
-    <section className="py-24 bg-dark-charcoal relative overflow-hidden">
+    <section className="py-24 bg-page-warm-alt relative overflow-hidden">
 
       {/* Top section divider */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-mdcat-yellow/40 to-transparent" />
@@ -276,14 +276,16 @@ export default function TopperAndStars() {
           </div>
 
           <h2
-            className="font-inter font-black text-white leading-tight mb-3"
+            className="font-inter font-black text-gray-900 leading-tight mb-3"
             style={{ fontSize: "clamp(2rem, 5vw, 3.4rem)", letterSpacing: "-0.025em" }}
           >
-            Meet Our <span className="text-gradient-yellow">Toppers!</span>
+            Before we launched,
+            <br />
+            <span className="text-mdcat-yellow">we ran a pilot. Here are the results.</span>
           </h2>
-          <p className="text-warrior-text font-inter text-lg max-w-xl mx-auto">
-            These warriors came through our emergency FLP session last year. Now they&apos;re in medical college.{" "}
-            <span className="text-white font-semibold">Next year, this will be you.</span>
+          <p className="text-gray-600 font-inter text-lg max-w-2xl mx-auto">
+            Last year, before MDCATemy officially launched, Hayan ran an emergency pilot — a series of full-length practice tests, post-test discussion sessions, and direct guidance. No full coaching system. No personal plans. Just the tests and the community. These warriors came through it.{" "}
+            <span className="text-gray-900 font-semibold">Imagine what the full Study Tribe will do.</span>
           </p>
         </motion.div>
 
@@ -300,7 +302,7 @@ export default function TopperAndStars() {
             { value: "175/180", label: "Highest Score" },
             { value: "168–175", label: "Score Range" },
           ].map((s, i) => (
-            <div key={i} className="bg-warrior-black border border-warrior-border rounded-xl p-4 text-center">
+            <div key={i} className="bg-white border border-gray-200 rounded-xl p-4 text-center">
               <p className="font-inter font-black text-mdcat-yellow text-xl">{s.value}</p>
               <p className="text-warrior-text font-inter text-xs mt-0.5">{s.label}</p>
             </div>
@@ -313,7 +315,7 @@ export default function TopperAndStars() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative bg-warrior-black border border-mdcat-yellow/30 rounded-2xl overflow-hidden mb-16"
+          className="relative bg-white border border-mdcat-yellow/30 rounded-2xl overflow-hidden mb-16"
         >
           {/* Top yellow bar */}
           <div className="absolute top-0 left-0 right-0 h-1 bg-mdcat-yellow" />
@@ -321,12 +323,12 @@ export default function TopperAndStars() {
           <div className="flex flex-col lg:flex-row gap-0">
 
             {/* Left — avatar + stats */}
-            <div className="lg:w-2/5 flex flex-col items-center justify-center p-10 border-b lg:border-b-0 lg:border-r border-warrior-border">
+            <div className="lg:w-2/5 flex flex-col items-center justify-center p-10 border-b lg:border-b-0 lg:border-r border-gray-200">
               <NasrinAvatar />
 
               <div className="mt-6 text-center">
-                <h3 className="font-inter font-black text-white text-2xl tracking-tight">Nasrin Ghafoor</h3>
-                <p className="text-warrior-text font-inter text-sm mt-1">Roll # 5830006</p>
+                <h3 className="font-inter font-black text-gray-900 text-2xl tracking-tight">Nasrin Ghafoor</h3>
+                <p className="text-gray-500 font-inter text-sm mt-1">Roll # 5830006</p>
 
                 <div className="mt-4 inline-block bg-mdcat-yellow rounded-xl px-6 py-3">
                   <span className="font-inter font-black text-warrior-black text-3xl">175/180</span>
@@ -353,7 +355,7 @@ export default function TopperAndStars() {
                 <Quote size={18} className="text-mdcat-yellow" />
               </div>
 
-              <blockquote className="text-white/90 font-inter text-lg leading-relaxed italic space-y-4">
+              <blockquote className="text-gray-700 font-inter text-lg leading-relaxed italic space-y-4">
                 <p>
                   &ldquo;Assalamualaikum. My name is Nasrin Ghafoor and Alhamdulillah I scored 175/180 in MDCAT 2025.
                   I joined MDCATemy for my preparation and I can confidently say that it is the best online platform for test series and guided preparation.
@@ -370,7 +372,7 @@ export default function TopperAndStars() {
                 </p>
               </blockquote>
 
-              <div className="mt-8 pt-6 border-t border-warrior-border flex flex-wrap gap-3">
+              <div className="mt-8 pt-6 border-t border-gray-200 flex flex-wrap gap-3">
                 {["Best Platform", "Precise MCQs", "Personal Guidance", "Fear Conquered"].map((tag, i) => (
                   <span
                     key={i}
@@ -392,10 +394,10 @@ export default function TopperAndStars() {
           transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
-          <h3 className="font-inter font-black text-white text-2xl mb-2">
-            Our <span className="text-gradient-yellow">Shining Warriors</span>
+          <h3 className="font-inter font-black text-gray-900 text-2xl mb-2">
+            Our <span className="text-mdcat-yellow">Shining Warriors</span>
           </h3>
-          <p className="text-warrior-text font-inter text-base">
+          <p className="text-gray-500 font-inter text-base">
             More warriors who conquered MDCAT through our system.
           </p>
         </motion.div>
@@ -425,9 +427,9 @@ export default function TopperAndStars() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
-          className="text-center bg-warrior-black border border-warrior-border rounded-xl p-6 max-w-2xl mx-auto mb-10"
+          className="text-center bg-white border border-gray-200 rounded-xl p-6 max-w-2xl mx-auto mb-10"
         >
-          <p className="text-white font-inter font-bold text-base italic mb-2">
+          <p className="text-gray-900 font-inter font-bold text-base italic mb-2">
             &ldquo;I will try to be honest. The FLPs were actually good as they helped me a lot. In sha Allah I will crack my MDCAT because of this test session.&rdquo;
           </p>
           <p className="text-mdcat-yellow font-inter font-bold text-sm">— Zain Khan, FLP 2025</p>

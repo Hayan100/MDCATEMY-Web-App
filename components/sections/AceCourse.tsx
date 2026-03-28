@@ -101,11 +101,11 @@ function ModuleItem({ mod, index }: { mod: typeof MODULES[0]; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.07 }}
-      className="border border-warrior-border rounded-xl overflow-hidden"
+      className="border border-gray-200 rounded-xl overflow-hidden"
     >
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center gap-4 p-5 text-left bg-dark-charcoal hover:bg-warrior-gray transition-colors duration-200 group"
+        className="w-full flex items-center gap-4 p-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200 group"
       >
         {/* Week badge */}
         <div className="flex-shrink-0 w-16 text-center">
@@ -113,7 +113,7 @@ function ModuleItem({ mod, index }: { mod: typeof MODULES[0]; index: number }) {
         </div>
 
         {/* Divider */}
-        <div className="flex-shrink-0 w-px h-8 bg-warrior-border" />
+        <div className="flex-shrink-0 w-px h-8 bg-gray-200" />
 
         {/* Icon */}
         <div className="flex-shrink-0 w-8 h-8 bg-mdcat-yellow/10 border border-mdcat-yellow/20 rounded-sm flex items-center justify-center">
@@ -121,7 +121,7 @@ function ModuleItem({ mod, index }: { mod: typeof MODULES[0]; index: number }) {
         </div>
 
         {/* Title */}
-        <span className="flex-1 font-inter font-bold text-white text-sm lg:text-base group-hover:text-mdcat-yellow transition-colors duration-200 pr-2">
+        <span className="flex-1 font-inter font-bold text-gray-900 text-sm lg:text-base group-hover:text-mdcat-yellow transition-colors duration-200 pr-2">
           {mod.title}
         </span>
 
@@ -129,9 +129,9 @@ function ModuleItem({ mod, index }: { mod: typeof MODULES[0]; index: number }) {
         <motion.div
           animate={{ rotate: open ? 180 : 0 }}
           transition={{ duration: 0.25 }}
-          className="flex-shrink-0 w-7 h-7 bg-warrior-black border border-warrior-border rounded-sm flex items-center justify-center"
+          className="flex-shrink-0 w-7 h-7 bg-gray-100 border border-gray-200 rounded-sm flex items-center justify-center"
         >
-          <ChevronDown size={13} className="text-warrior-text" />
+          <ChevronDown size={13} className="text-gray-500" />
         </motion.div>
       </button>
 
@@ -145,15 +145,15 @@ function ModuleItem({ mod, index }: { mod: typeof MODULES[0]; index: number }) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="px-5 pb-5 bg-warrior-black border-t border-warrior-border">
-              <p className="text-warrior-text text-xs font-inter font-bold uppercase tracking-widest mt-4 mb-3">
+            <div className="px-5 pb-5 bg-gray-50 border-t border-gray-200">
+              <p className="text-gray-500 text-xs font-inter font-bold uppercase tracking-widest mt-4 mb-3">
                 What you&apos;ll learn in this session:
               </p>
               <ul className="space-y-2.5">
                 {mod.topics.map((topic, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle size={14} className="text-mdcat-yellow flex-shrink-0 mt-0.5" />
-                    <span className="text-white/80 font-inter text-sm leading-relaxed">{topic}</span>
+                    <span className="text-gray-700 font-inter text-sm leading-relaxed">{topic}</span>
                   </li>
                 ))}
               </ul>
@@ -210,7 +210,7 @@ function InstructorAvatar() {
 ───────────────────────────────────────── */
 export default function AceCourse() {
   return (
-    <section id="ace-course" className="py-24 bg-dark-charcoal tribal-overlay relative overflow-hidden">
+    <section id="ace-course" className="py-24 bg-gray-50 tribal-overlay relative overflow-hidden">
 
       {/* Top section divider line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-mdcat-yellow/40 to-transparent" />
@@ -241,16 +241,16 @@ export default function AceCourse() {
           </div>
 
           <h2
-            className="font-inter font-black text-white leading-tight mb-3"
+            className="font-inter font-black text-gray-900 leading-tight mb-3"
             style={{ fontSize: "clamp(2rem, 5vw, 3.6rem)", letterSpacing: "-0.025em" }}
           >
             Ace MDCAT{" "}
-            <span className="text-gradient-yellow">Like a Warrior</span>
+            <span className="text-mdcat-yellow">Like a Warrior</span>
           </h2>
           <p className="text-mdcat-yellow font-inter font-bold text-sm uppercase tracking-widest mb-4">
             Our Interactive Live Course
           </p>
-          <p className="text-warrior-text font-inter text-xl max-w-2xl mx-auto">
+          <p className="text-gray-600 font-inter text-xl max-w-2xl mx-auto">
             6 live, interactive sessions — one per week — led personally by Hayan Khan.
             Mindset. Strategy. Study techniques. Guidance. Everything that turns a nervous student into a battle-ready warrior.
           </p>
@@ -272,13 +272,13 @@ export default function AceCourse() {
           ].map((stat, i) => (
             <div
               key={i}
-              className="bg-dark-charcoal border border-warrior-border rounded-sm p-4 flex flex-col items-center text-center gap-2"
+              className="bg-white border border-gray-200 rounded-sm p-4 flex flex-col items-center text-center gap-2"
             >
               <div className="w-9 h-9 bg-mdcat-yellow/10 border border-mdcat-yellow/20 rounded-sm flex items-center justify-center">
                 <stat.icon size={15} className="text-mdcat-yellow" />
               </div>
-              <p className="font-inter font-black text-white text-sm">{stat.label}</p>
-              <p className="font-inter text-warrior-text text-xs">{stat.sub}</p>
+              <p className="font-inter font-black text-gray-900 text-sm">{stat.label}</p>
+              <p className="font-inter text-gray-500 text-xs">{stat.sub}</p>
             </div>
           ))}
         </motion.div>
@@ -289,7 +289,7 @@ export default function AceCourse() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.55, delay: 0.1 }}
-          className="bg-dark-charcoal border border-warrior-border rounded-xl p-6 lg:p-8 mb-10 flex flex-col sm:flex-row gap-6 items-center"
+          className="bg-white border border-gray-200 rounded-xl p-6 lg:p-8 mb-10 flex flex-col sm:flex-row gap-6 items-center"
         >
           <div className="flex-shrink-0">
             <div className="relative w-24 h-24 rounded-xl overflow-hidden border-2 border-mdcat-yellow/50" style={{ boxShadow: "0 0 20px rgba(255,198,0,0.2)" }}>
@@ -305,8 +305,8 @@ export default function AceCourse() {
             <p className="text-mdcat-yellow text-xs font-inter font-black uppercase tracking-widest mb-2">
               Your Instructor
             </p>
-            <h3 className="font-inter font-black text-white text-xl mb-2">Hayan Khan</h3>
-            <p className="text-warrior-text font-inter text-sm leading-relaxed">
+            <h3 className="font-inter font-black text-gray-900 text-xl mb-2">Hayan Khan</h3>
+            <p className="text-gray-600 font-inter text-sm leading-relaxed">
               Scored <span className="text-mdcat-yellow font-bold">184/200</span> in MDCAT 2024 with an aggregate of <span className="text-mdcat-yellow font-bold">32.7</span>.
               Hayan built MDCATemy after realising that the biggest barrier between students and MBBS seats is not knowledge — it is fear, lack of strategy, and the absence of a real system.
               This course is his personal playbook, distilled into 6 live sessions.
@@ -328,7 +328,7 @@ export default function AceCourse() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="text-warrior-text text-xs font-inter font-black uppercase tracking-widest mb-5"
+            className="text-gray-500 text-xs font-inter font-black uppercase tracking-widest mb-5"
           >
             Course Curriculum — 6 Live Sessions
           </motion.p>
@@ -351,8 +351,8 @@ export default function AceCourse() {
           <p className="text-mdcat-yellow font-inter font-black text-base mb-1">
             This course is not sold separately.
           </p>
-          <p className="text-warrior-text font-inter text-sm">
-            Ace MDCAT Like a Warrior is included <strong className="text-white">free</strong> with every Study Tribe enrollment. You get the live sessions, the community, and the system — all in one.
+          <p className="text-gray-600 font-inter text-sm">
+            Ace MDCAT Like a Warrior is included <strong className="text-gray-900">free</strong> with every Study Tribe enrollment. You get the live sessions, the community, and the system — all in one.
           </p>
           <a href="#pricing" className="btn-primary inline-block mt-5">
             Join the Tribe to Get Access
