@@ -6,11 +6,9 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const navLinks = [
-  { label: "My Camp", href: "#" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Courses", href: "#" },
   { label: "Books", href: "#" },
   { label: "Tests", href: "#" },
+  { label: "Pricing", href: "#pricing" },
   { label: "About Us", href: "#architect" },
 ];
 
@@ -41,8 +39,8 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between" style={{ height: "72px" }}>
-            {/* Logo */}
-            <a href="#" className="flex items-center gap-2 flex-shrink-0">
+            {/* Logo — pushed to far left */}
+            <a href="#" className="flex items-center gap-2 flex-shrink-0 mr-auto">
               <Image
                 src="/images/mdcat.svg"
                 alt="MDCATEMY"
@@ -54,29 +52,53 @@ export default function Navbar() {
               />
             </a>
 
-            {/* Desktop nav */}
-            <div className="hidden lg:flex items-center gap-8">
+            {/* Desktop nav links + buttons — all on the right */}
+            <div className="hidden lg:flex items-center gap-8 ml-auto">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-inter font-medium text-mdcat-yellow hover:text-white transition-colors duration-200 uppercase tracking-wider"
+                  className="text-sm font-inter font-medium text-white/80 hover:text-white transition-colors duration-200"
                 >
                   {link.label}
                 </a>
               ))}
             </div>
 
-            {/* CTA */}
-            <div className="hidden lg:flex items-center gap-4">
+            {/* Desktop buttons */}
+            <div className="hidden lg:flex items-center gap-2 ml-6">
+              {/* Login button — outlined */}
               <a
                 href="#"
-                className="text-sm font-inter font-medium text-white/70 hover:text-white transition-colors duration-200 uppercase tracking-wider"
+                className="font-inter font-medium text-sm text-[#FFC600] transition-colors duration-200"
+                style={{
+                  border: "1px solid #FFC600",
+                  borderRadius: "8px",
+                  padding: "0.5rem 1.25rem",
+                  lineHeight: "1",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  height: "38px",
+                }}
               >
                 Login
               </a>
-              <a href="#pricing" className="btn-primary text-sm px-6 py-3">
-                Join the Tribe
+
+              {/* Join Today button — filled */}
+              <a
+                href="#pricing"
+                className="font-inter font-semibold text-sm text-black transition-opacity duration-200 hover:opacity-90"
+                style={{
+                  backgroundColor: "#FFC600",
+                  borderRadius: "8px",
+                  padding: "0.5rem 1.25rem",
+                  lineHeight: "1",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  height: "38px",
+                }}
+              >
+                Join today
               </a>
             </div>
 
@@ -92,7 +114,7 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* Mobile menu — frosted glass */}
+      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -115,19 +137,26 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-base font-inter font-medium text-mdcat-yellow hover:text-white transition-colors uppercase tracking-wider"
+                  className="text-base font-inter font-medium text-white/80 hover:text-white transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
               <div className="pt-4 flex flex-col gap-3" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-                <a href="#" className="btn-ghost text-center">Login</a>
+                <a
+                  href="#"
+                  className="font-inter font-medium text-sm text-[#FFC600] text-center py-2 rounded-lg"
+                  style={{ border: "1px solid #FFC600" }}
+                >
+                  Login
+                </a>
                 <a
                   href="#pricing"
-                  className="btn-primary text-center"
+                  className="font-inter font-semibold text-sm text-black text-center py-2 rounded-lg"
+                  style={{ backgroundColor: "#FFC600" }}
                   onClick={() => setMobileOpen(false)}
                 >
-                  Join the Tribe
+                  Join today
                 </a>
               </div>
             </div>

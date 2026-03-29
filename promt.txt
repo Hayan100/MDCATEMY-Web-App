@@ -1,0 +1,65 @@
+Build a new interactive frontend component for the MDCATEMY landing page called StorySection.tsx. This section will act as a "Scroll-Telling" editorial article.
+
+Tech Stack: Next.js, Tailwind CSS, and Framer Motion.
+
+Global Design Rules:
+
+Background: Deep Warrior Black (#181A18).
+
+Accents: MDCATemy Yellow (#FFC600).
+
+Typography: Headlines in Poppins (Black/Bold), Body text in Inter (Regular/Medium). Text color primarily White with #CCCCCC for secondary body text.
+
+Animation: Use Framer Motion's whileInView to trigger scroll animations. Every block must fade up with a slight Y-offset as the user scrolls down to it.
+
+Section Structure & Copy (Roman Urdu):
+
+Block 1: The Hook (Center Aligned)
+
+Layout: Centered text, large typography, generous vertical padding (min-h-screen to act as a standalone hook).
+
+Animation: Staggered word/line reveal.
+
+Text: "MDCAT ek bohat hi aasan test hai. Aur sab is ke liye study karte hain... lekin sirf chand students hi isay crack kar paate hain."
+(Line break, larger and Yellow) "Aisa kyun hai?"
+
+Block 2: The Core Problem (Split Layout - Text Left, Image Right)
+
+Layout: Two-column grid (grid-cols-1 md:grid-cols-2).
+
+Image: Use Next/Image pointing exactly to /images/pic1.png. Ensure it is styled with rounded corners (rounded-lg) and a subtle shadow.
+
+Text: "Is ki sab se bari waja hai: 'Not knowing what works and what not.' Students ko pata hi nahi hota ke MDCAT ko crack karne ke liye unhe actual mein karna kya hai. Kya cheez matter karti hai, aur kya nahi."
+"Zyada door nahi jate, MDCAT 2025 ko hi dekh lein. Test bohat aasan tha aur poora aapki books mein se aaya tha. Lekin bohat saare students is liye fail ho gaye kyunke unhe lagta tha test out-of-syllabus aayega. Unhon ne apna poora time mushkil aur out-of-syllabus cheezein seekhne mein zaya kar diya, aur aasan MCQs un se reh gaye."
+
+Block 3: The Academy Trap (Full Width Callout)
+
+Layout: Single column, full width but constrained inside a max-width container. Background should be Dark Charcoal (#222422) with a thick 4px Yellow (#FFC600) left border. Padding inside should be generous.
+
+Animation: Scale up slightly (0.95 to 1) on scroll.
+
+Text:
+"Is mein saari ghalti students ki nahi thi. Ghalti un preparation platforms ki bhi thi jinhon ne unko out-of-syllabus cheezein parhain. Jinka MCQ bank mushkil-e-zamana aur out-of-book sawalon se bhara para hai. Jo students ko faide se zyada nuqsan de rahe thay."
+"Ab ye baat student ko kaun bataye ga? Student jo ghaltiyan kar raha hai, usay note kaun kare ga? Ye saari academies toh bas recorded lectures pakra deti hain aur phir ghaib ho jaati hain. Student ko toh koi roadmap nahi deta. Usko kya problems aa rahi hain, kahan wo confuse hai, kyun wo stress mein hai ye toh koi nahi dekh raha... he is completely alone in this journey."
+
+Block 4: The Silent Killer (Split Layout Reversed - Image Left, Text Right)
+
+Layout: Two-column grid. Image on the left on desktop, text on the right.
+
+Image: Use Next/Image pointing exactly to /images/pic2.png.
+
+Text:
+"Kya sirf yahi ek waja thi MDCAT ko fail karne ki? Nahi. Ek aur waja bhi hai."
+(Make this a Yellow Subheading) "MDCAT Anxiety. Fail hone ka darr!"
+"Koi platform is baare mein baat hi nahi kar raha ke aapka sab se bara dushman aapka khauf hai. Yahi khauf hi aapse test fail karwayega kyunke jab aap darr rahe hote hain toh aapka dimagh sahi kaam nahi karta. Us pressure walay mahol mein, aap un sawalaat ko bhi ghalat kar dete hain jo aapko aate thay."
+
+Block 5: The Warrior Solution (Center Aligned Climax)
+
+Layout: Centered text, bringing the focus back to the middle.
+
+Text:
+"MDCAT ko crack karne ke liye ye darr aapko mitana hoga. Aur kyunke koi academy is kaam ke liye tayar nahi thi, is liye we built MDCATEMY aur Study Tribe taake aapko kabhi ye feel na ho ke aap is journey mein akele hain."
+"Student koi mistake kare toh hum usay samjhayein aur sahi raste par layein. Student kabhi stressed ho toh hum uski counselling karein. Hum aapki efficiency increase karna chahte hain, aapko ek aisi Tribe aur kaisa roadmap dena chahte hain taake aapko ek Warrior banaya ja sake..."
+(Large, bold, yellow text for the final punchline) "Kyunke Warriors bahadur hote hain... aur wo kisi cheez se nahi darte!"
+
+Build this component now, ensuring the layout is fully responsive and the Framer Motion animations feel smooth and high-end. Do not write any backend logic.

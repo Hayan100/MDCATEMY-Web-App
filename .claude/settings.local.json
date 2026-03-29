@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"d:/claude code projects/MDCATEMY Landing Page \\(Dark\\) - Copy\")",
+      "Bash(ls \"d:/claude code projects/MDCATEMY Landing Page \\(Dark\\) - Copy/app\")",
+      "Bash(ls \"d:/claude code projects/MDCATEMY Landing Page \\(Dark\\) - Copy/components\")",
+      "Bash(find \"d:/claude code projects/MDCATEMY Landing Page \\(Dark\\) - Copy/app\" -type f)",
+      "Bash(find \"d:/claude code projects/MDCATEMY Landing Page \\(Dark\\) - Copy/components\" -type f)",
+      "Bash(find \"d:/claude code projects/MDCATEMY Landing Page \\(Dark\\) - Copy/public\" -type f)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\(''''mcpServers'''',{}\\), indent=2\\)\\)\")",
+      "Bash(claude mcp:*)",
+      "Bash(cmd /c \"dir \"\"C:\\\\Users\\\\mhaya\\\\AppData\\\\Roaming\\\\Claude\"\" 2>nul\")",
+      "Bash(cmd /c \"dir /b \"\"C:\\\\Users\\\\mhaya\\\\AppData\\\\Roaming\\\\Claude\"\"\")",
+      "Bash(powershell -Command \"Test-Path ''C:\\\\Users\\\\mhaya\\\\.claude\\\\mcp.json''; Test-Path ''D:\\\\claude code projects\\\\MDCATEMY Landing Page \\(Dark\\) - Copy\\\\.mcp.json''\")",
+      "mcp__claude_ai_Figma__get_metadata",
+      "mcp__claude_ai_Figma__get_screenshot",
+      "mcp__claude_ai_Figma__use_figma",
+      "Bash(ls \"d:/claude code projects/MDCATEMY Landing Page \\(Dark\\) - Copy/components/sections/\")",
+      "Bash(ls \"d:/claude code projects/MDCATEMY Landing Page \\(Dark\\) - Copy/components/ui/\")",
+      "Bash(ls:*)",
+      "mcp__claude_ai_Figma__get_design_context",
+      "Bash(npx next:*)",
+      "Bash(npx tsc:*)",
+      "Bash(find:*)",
+      "Bash(head:*)",
+      "Bash(grep -o '.\\\\{0,80\\\\}fill=\"\"\"\"#ffffff\"\"\"\".\\\\{0,30\\\\}' \"D:/claude code projects/MDCATEMY Landing Page \\(Dark\\) - Copy/public/images/mdcat.svg\")"
+    ]
+  }
+}
